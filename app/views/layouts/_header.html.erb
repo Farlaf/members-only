@@ -1,4 +1,4 @@
-<h1>Members Only</h1>
+<%= link_to "Members Only", root_path %>
 
 <% if current_user %>
     <p>Login us <%= current_user.email %></p>
@@ -7,4 +7,3 @@
     <%= link_to "Loigin", new_user_session_path %>
     <%= link_to "Sing up", new_user_registration_path %>
 <% end %>
-
