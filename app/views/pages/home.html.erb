@@ -1,0 +1,10 @@
+<h1>Members Only</h1>
+
+<% if current_user %>
+    <p>Login us <%= current_user.email %></p>
+    <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete} %>
+<% else %>
+    <%= link_to "Loigin", new_user_session_path %>
+    <%= link_to "Sing up", new_user_registration_path %>
+<% end %>
+
