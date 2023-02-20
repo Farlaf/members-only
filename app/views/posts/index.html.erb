@@ -1,7 +1,9 @@
-<h1>Posts#index</h1>
-
-<% if current_user %>
-    <%= link_to "New Post", new_post_path %>
+<% unless current_user %>
+    <div class="bg-light p-5 rounded mb-4">
+    <h1>For members only</h1>
+    <p class="lead">For see who wrote the post, you need to login</p>
+    <%= link_to "See members »", new_user_session_path, class: "btn btn-lg btn-primary" %>
+  </div>
 <% end %>
 
 
